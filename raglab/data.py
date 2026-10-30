@@ -77,59 +77,14 @@ def scifact_hf_adapter(raw: Path):
         counts[name] = {"queries": len(rel), "eligible": len(rel), "excluded_no_paragraph_qrels": 0}
     return docs, splits, qrels, counts
 
-def prepare(name: str, progress=None, root=DATA):
-    if name not in ("rubq", "scifact"):
-        raise ValueError(f"Unknown dataset: {name}")
+def prepare(name="pdd", progress=None, root=DATA):
+    if name != "pdd":
+        raise ValueError("В личном RAG доступна только база ПДД России")
     directory = root / name
-    if (directory / "manifest.json").exists():
-        return load_dataset(name, root)
-    raw = directory / "raw"
-    raw.mkdir(parents=True, exist_ok=True)
-    if name == "rubq":
-        revision_path = raw / "revision.json"
-        if not revision_path.exists():
-            revision = subprocess.check_output(["git", "ls-remote", "https://github.com/vladislavneon/RuBQ.git", "refs/heads/master"],
-                                               timeout=60, text=True).split()[0]
-            write_json(revision_path, {"revision": revision})
-        revision = read_json(revision_path)["revision"]
-        sources = [f"https://raw.githubusercontent.com/vladislavneon/RuBQ/{revision}/RuBQ_2.0/{filename}"
-                   for filename in ("RuBQ_2.0_paragraphs.json", "RuBQ_2.0_dev.json", "RuBQ_2.0_test.json")]
-        for url in sources:
-            download(url, raw / url.rsplit("/", 1)[-1], progress)
-        docs, queries, qrels, counts = rubq_adapter(raw)
-    else:
-        # Official BEIR mirror; avoids relying on the archive host's incomplete TLS chain.
-        revision_path = raw / "revision.json"
-        if not revision_path.exists():
-            revisions = {}
-            for repo in ("scifact", "scifact-qrels"):
-                with urllib.request.urlopen(f"https://huggingface.co/api/datasets/BeIR/{repo}", timeout=30) as response:
-                    revisions[repo] = json.load(response)["sha"]
-            write_json(revision_path, revisions)
-        revision = read_json(revision_path)
-        files = [("scifact", "corpus/corpus-00000-of-00001.parquet", "corpus.parquet"),
-                 ("scifact", "queries/queries-00000-of-00001.parquet", "queries.parquet"),
-                 ("scifact-qrels", "train.tsv", "train.tsv"), ("scifact-qrels", "test.tsv", "test.tsv")]
-        sources = []
-        for repo, remote, local in files:
-            url = f"https://huggingface.co/datasets/BeIR/{repo}/resolve/{revision[repo]}/{remote}"
-            sources.append(url)
-            download(url, raw / local, progress)
-        docs, queries, qrels, counts = scifact_hf_adapter(raw)
-    valid_docs = {d.id for d in docs}
-    if len(valid_docs) != len(docs):
-        raise ValueError("Duplicate document IDs")
-    for rel in qrels.values():
-        if any(set(v) - valid_docs for v in rel.values()):
-            raise ValueError("Qrels reference missing documents")
-    normalized = directory / "dataset.json"
-    write_json(normalized, {"documents": docs, "queries": queries, "qrels": qrels})
-    manifest = {"schema": 1, "dataset": name, "revision": revision, "sources": sources,
-                "source_sha256": {p.name: file_hash(p) for p in raw.iterdir() if p.suffix in (".json", ".zip", ".parquet", ".tsv")},
-                "normalized_sha256": file_hash(normalized), "documents": len(docs), "splits": counts,
-                "seed": SEED, "license": "CC-BY-SA-4.0"}
-    write_json(directory / "manifest.json", manifest)
-    return Dataset(name, docs, queries, qrels, manifest)
+    if not (directory / "manifest.json").exists():
+        from .pdd import build
+        build(directory, progress=progress)
+    return load_dataset(name, root)
 
 def load_dataset(name, root=DATA):
     directory = root / name

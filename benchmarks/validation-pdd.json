@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-31",
+  "scope": "Personal PDD RAG, restart verification",
+  "active_datasets": ["pdd"],
+  "tests": {"passed": 42, "failed": 0},
+  "pip_check": "passed",
+  "corpus_verification": {"documents": 1164, "verified_sources": 547, "verified_images": 740, "pdd_sections": 26, "status": "passed"},
+  "saved_index": {"chunks": 1564, "reused_after_restart": true},
+  "browser": {"service_restored": true, "sign_3_24_visible": true, "explanation_with_citations": true, "question": "Покажи знак 3.24 и коротко объясни его смысл и зону действия.", "screenshot": "docs/pdd-restart.jpg"},
+  "api": {"profile": "sub2api", "model": "gpt-5.6-luna", "used_before_restart_check": 31, "used_after_restart_check": 32, "unlimited": true},
+  "prior_integration_checks": "benchmarks/pdd-integration.json",
+  "quality_evaluation": "No independent PDD gold set exists; these are integration checks, not retrieval or answer-quality metrics."
+}

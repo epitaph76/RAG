@@ -12,6 +12,7 @@ dependencies = [
   "faiss-cpu>=1.10", "laya>=0.4.18", "streamlit>=1.45",
   "numpy>=1.26", "psutil>=6", "openai>=1.70", "pandas>=2.2",
   "huggingface-hub>=0.30", "pytest>=8",
+  "beautifulsoup4>=4.14.3", "requests>=2.32", "pyarrow>=18", "pillow>=11", "tzdata>=2025.1",
 ]
 
 [project.scripts]

@@ -1,6 +1,7 @@
 import time
 import threading
 import math
+import re
 from pathlib import Path
 import numpy as np
 
@@ -31,6 +32,19 @@ def collapse_documents(hits):
             seen.add(hit.chunk.document_id)
             result.append(hit)
     return result
+
+def prioritize_sign_codes(query, hits, chunks):
+    """Identifiers in an explicit sign question resolve to catalog entries."""
+    if not re.search(r"\bзнак\w*", query, re.I):
+        return hits
+    codes = list(dict.fromkeys(re.findall(r"(?<![\d.])([1-8]\.\d+(?:\.\d+)?)(?!\d|\.\d)", query)))
+    exact = []
+    for code in codes:
+        document_id = f"gost-sign:{code}:1"
+        chunk = next((c for c in chunks if c.document_id == document_id), None)
+        if chunk is not None:
+            exact.append(Hit(chunk, 1.0))
+    return collapse_documents(exact + hits)
 
 def rrf(rankings, k=60):
     scores, chunks = {}, {}
@@ -234,5 +248,9 @@ class Index:
                 except Exception:
                     warnings.append("Laya reranker недоступен: сохранён исходный порядок.")
                 timings["reranker"] = (time.perf_counter() - before) * 1000
+            if self.dataset.name == "pdd":
+                before = time.perf_counter()
+                hits = prioritize_sign_codes(query, hits, self.chunks)
+                timings["sign_lookup"] = (time.perf_counter() - before) * 1000
             timings["total"] = (time.perf_counter() - started) * 1000
             return SearchResult(hits[:limit], route, confidence, timings, warnings)

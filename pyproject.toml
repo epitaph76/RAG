@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hybrid-laya-lab"
+version = "0.1.0"
+description = "Local, reproducible Russian/English Hybrid RAG laboratory"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "torch>=2.6", "bm25s>=0.2", "sentence-transformers>=3.4",
+  "faiss-cpu>=1.10", "laya>=0.4.18", "streamlit>=1.45",
+  "numpy>=1.26", "psutil>=6", "openai>=1.70", "pandas>=2.2",
+  "huggingface-hub>=0.30", "pytest>=8",
+]
+
+[project.scripts]
+rag-lab = "raglab.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["raglab*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

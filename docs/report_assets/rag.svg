@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="480" height="143" preserveAspectRatio="xMinYMin meet" viewBox="0 0 480 143" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="480" height="143"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-143)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="48" width="143" height="77" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="9" y="107" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,214) scale(1,-1)">Вопрос</text>
+			<text x="9" y="89" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,178) scale(1,-1)">Что означает знак?</text>
+			<rect x="168" y="48" width="143" height="77" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="177" y="107" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,214) scale(1,-1)">Найденные источники</text>
+			<text x="177" y="89" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,178) scale(1,-1)">Текст из своей базы</text>
+			<rect x="336" y="48" width="143" height="77" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="345" y="107" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,214) scale(1,-1)">Ответ</text>
+			<text x="345" y="89" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,178) scale(1,-1)">Модель объясняет текст</text>
+			<path d="M 143,87 L 166,87 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="166 87, 161 89.7, 161 84.3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<path d="M 311,87 L 334,87 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="334 87, 329 89.7, 329 84.3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<text x="0" y="17" style="font-family: Noto; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,34) scale(1,-1)">Поиск подбирает материал. Генератор формулирует объяснение.</text>
+		</g>
+	</g>
+</svg>

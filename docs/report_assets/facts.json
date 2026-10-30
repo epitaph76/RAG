@@ -1,0 +1,121 @@
+{
+  "report_date": "2026-10-31",
+  "source_commit": "a0d29268ab3d7b8dce3a18d9c1a98e6f506793c3",
+  "snapshot_date": "2026-10-30",
+  "documents": 1164,
+  "chunks": 1564,
+  "dimension": 384,
+  "dtype": "float32",
+  "matrix_bytes": 2402304,
+  "dense_index_bytes": 2402349,
+  "coverage": {
+    "pdd_sections": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "sign_groups": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "families": {
+      "decree": 7,
+      "pdd": 195,
+      "sign_rules": 8,
+      "markings": 2,
+      "admission": 23,
+      "malfunctions": 86,
+      "koap": 53,
+      "uk": 7,
+      "road_safety_law": 33,
+      "osago_law": 38,
+      "sign_application_standard": 404,
+      "sign_catalog": 308
+    },
+    "sign_images": 308,
+    "unique_sign_codes": 308,
+    "real_photos": 432,
+    "photo_classes": 125,
+    "errors": [
+      {
+        "url": "https://publication.pravo.gov.ru/document/0001202608310048",
+        "error": "ReadTimeout"
+      }
+    ]
+  },
+  "revisions": {
+    "pdd": "2026-08-28",
+    "koap": "2026-08-04",
+    "sign_standard": "ГОСТ Р 52290-2024",
+    "application_standard": "2025-07-22"
+  },
+  "dataset_sha256": "c379bf2cf6f261d65252411b5d364eeb18ebf97333e491b2f9c405fd4f0c6def",
+  "verification": {
+    "date": "2026-10-31",
+    "scope": "Personal PDD RAG, restart verification",
+    "active_datasets": [
+      "pdd"
+    ],
+    "tests": {
+      "passed": 42,
+      "failed": 0
+    },
+    "pip_check": "passed",
+    "corpus_verification": {
+      "documents": 1164,
+      "verified_sources": 547,
+      "verified_images": 740,
+      "pdd_sections": 26,
+      "status": "passed"
+    },
+    "saved_index": {
+      "chunks": 1564,
+      "reused_after_restart": true
+    },
+    "browser": {
+      "service_restored": true,
+      "sign_3_24_visible": true,
+      "explanation_with_citations": true,
+      "question": "Покажи знак 3.24 и коротко объясни его смысл и зону действия.",
+      "screenshot": "docs/pdd-restart.jpg"
+    },
+    "api": {
+      "profile": "sub2api",
+      "model": "gpt-5.6-luna",
+      "used_before_restart_check": 31,
+      "used_after_restart_check": 32,
+      "unlimited": true
+    },
+    "prior_integration_checks": "benchmarks/pdd-integration.json",
+    "quality_evaluation": "No independent PDD gold set exists; these are integration checks, not retrieval or answer-quality metrics."
+  }
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="480" height="192" preserveAspectRatio="xMinYMin meet" viewBox="0 0 480 192" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="480" height="192"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-192)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="72" width="194" height="105" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="9" y="159" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,318) scale(1,-1)">Приложение на ноутбуке</text>
+			<text x="9" y="141" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,282) scale(1,-1)">Корпус, поиск, изображения</text>
+			<text x="9" y="130" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,260) scale(1,-1)">Подготовка контекста</text>
+			<rect x="286" y="72" width="194" height="105" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="295" y="159" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,318) scale(1,-1)">API-шлюз и генератор</text>
+			<text x="295" y="141" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,282) scale(1,-1)">127.0.0.1:8080/v1</text>
+			<text x="295" y="130" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,260) scale(1,-1)">Место вычислений задаёт шлюз</text>
+			<path d="M 194,136 L 284,136 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="284 136, 279 138.7, 279 133.3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<path d="M 286,101 L 196,101 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="196 101, 201 103.7, 201 98.3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<text x="220.31875" y="153" style="font-family: Noto; font-size: 8.7px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,306) scale(1,-1)">запрос</text>
+			<text x="223.26805" y="83" style="font-family: Noto; font-size: 8.7px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,166) scale(1,-1)">ответ</text>
+			<text x="0" y="39" style="font-family: Noto; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,78) scale(1,-1)">Передаются вопрос, тексты источников и названия картинок.</text>
+			<text x="0" y="21" style="font-family: Noto; font-size: 10px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,42) scale(1,-1)">Пиксели и весь корпус приложение в этот API не отправляет.</text>
+		</g>
+	</g>
+</svg>

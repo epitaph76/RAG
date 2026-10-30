@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="480" height="315" preserveAspectRatio="xMinYMin meet" viewBox="0 0 480 315" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="480" height="315"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-315)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="235" width="144" height="68" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="9" y="285" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,570) scale(1,-1)">Вопрос в Streamlit</text>
+			<text x="9" y="267" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,534) scale(1,-1)">app.py</text>
+			<rect x="168" y="235" width="144" height="68" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="177" y="285" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,570) scale(1,-1)">BM25 / E5 / FAISS</text>
+			<text x="177" y="267" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,534) scale(1,-1)">retrieval.py</text>
+			<rect x="336" y="235" width="144" height="68" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="345" y="285" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,570) scale(1,-1)">Контекст ПДД</text>
+			<text x="345" y="267" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,534) scale(1,-1)">traffic.py</text>
+			<path d="M 144,267 L 166,267 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="166 267, 161 269.7, 161 264.3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<path d="M 312,267 L 334,267 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="334 267, 329 269.7, 329 264.3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<rect x="336" y="123" width="144" height="72" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="345" y="177" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,354) scale(1,-1)">Генератор через API</text>
+			<text x="345" y="159" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,318) scale(1,-1)">generation.py</text>
+			<rect x="168" y="123" width="144" height="72" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="177" y="177" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,354) scale(1,-1)">Картинки из файлов</text>
+			<text x="177" y="159" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,318) scale(1,-1)">ID, путь, SHA-256</text>
+			<path d="M 408,235 L 408,197 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="408 197, 405.3 202, 410.7 202" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<path d="M 360,235 L 360,215 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 360,215 L 240,215 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 240,215 L 240,197 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="240 197, 237.3 202, 242.7 202" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<rect x="168" y="13" width="144" height="69" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="177" y="64" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,128) scale(1,-1)">Ответ в чате</text>
+			<text x="177" y="46" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,92) scale(1,-1)">Текст, изображения, ссылки</text>
+			<path d="M 240,123 L 240,84 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="240 84, 237.3 89, 242.7 89" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<path d="M 408,123 L 408,99 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 408,99 L 285,99 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 285,99 L 285,84 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="285 84, 282.3 89, 287.7 89" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<text x="0" y="148" style="font-family: Noto; font-size: 9.5px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,296) scale(1,-1)">Laya необязательна</text>
+			<text x="0" y="133" style="font-family: Noto; font-size: 9.5px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,266) scale(1,-1)">и работает в поиске</text>
+		</g>
+	</g>
+</svg>

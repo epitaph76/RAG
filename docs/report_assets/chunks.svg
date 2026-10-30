@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="480" height="190" preserveAspectRatio="xMinYMin meet" viewBox="0 0 480 190" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="480" height="190"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-190)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="12.0" y="135" width="168.75" height="29" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="17.0" y="145" style="font-family: Noto; font-size: 9.4px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,290) scale(1,-1)">0 ... 383</text>
+			<rect x="152.625" y="87" width="168.75" height="29" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<rect x="152.625" y="87" width="28.125" height="29" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(57%,65%,53%); fill-rule: evenodd;"/>
+			<text x="157.625" y="97" style="font-family: Noto; font-size: 9.4px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,194) scale(1,-1)">320 ... 703</text>
+			<rect x="293.25" y="39" width="168.75" height="29" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<rect x="293.25" y="39" width="28.125" height="29" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(57%,65%,53%); fill-rule: evenodd;"/>
+			<text x="298.25" y="49" style="font-family: Noto; font-size: 9.4px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,98) scale(1,-1)">640 ... 1023</text>
+			<text x="12" y="9" style="font-family: Noto; font-size: 10px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,18) scale(1,-1)">Шаг 320 токенов = длина 384 минус перекрытие 64</text>
+		</g>
+	</g>
+</svg>

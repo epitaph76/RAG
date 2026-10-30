@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="480" height="180" preserveAspectRatio="xMinYMin meet" viewBox="0 0 480 180" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="480" height="180"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-180)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="101" y="163" width="9" height="9" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<text x="116" y="163" style="font-family: Noto; font-size: 9.5px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,326) scale(1,-1)">Hybrid</text>
+			<rect x="218" y="163" width="9" height="9" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(47%,57%,62%); fill-rule: evenodd;"/>
+			<text x="233" y="163" style="font-family: Noto; font-size: 9.5px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,326) scale(1,-1)">Hybrid + reranker</text>
+			<text x="0" y="116" style="font-family: Noto-Bold; font-size: 11px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,232) scale(1,-1)">RuBQ</text>
+			<rect x="100" y="115" width="1.220688888888887" height="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<text x="107.22068888888889" y="118" style="font-family: Noto; font-size: 9.3px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,236) scale(1,-1)">0,034 с</text>
+			<rect x="100" y="93" width="201.0079777777778" height="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(47%,57%,62%); fill-rule: evenodd;"/>
+			<text x="307.0079777777778" y="96" style="font-family: Noto; font-size: 9.3px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,192) scale(1,-1)">5,549 с</text>
+			<text x="0" y="54" style="font-family: Noto-Bold; font-size: 11px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,108) scale(1,-1)">SciFact</text>
+			<rect x="100" y="53" width="1" height="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<text x="106.82224444444445" y="56" style="font-family: Noto; font-size: 9.3px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,112) scale(1,-1)">0,023 с</text>
+			<rect x="100" y="31" width="306.07053333333334" height="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(47%,57%,62%); fill-rule: evenodd;"/>
+			<text x="412.07053333333334" y="34" style="font-family: Noto; font-size: 9.3px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,68) scale(1,-1)">8,450 с</text>
+			<text x="100" y="5" style="font-family: Noto; font-size: 9px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,10) scale(1,-1)">Одинаковые 50 запросов на каждом корпусе. Исторический тест.</text>
+		</g>
+	</g>
+</svg>

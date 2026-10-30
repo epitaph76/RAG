@@ -9,3 +9,5 @@ data/
 artifacts/
 .streamlit/secrets.toml
 *.log
+tmp/pdfs/
+.report-venv/

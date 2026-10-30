@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="480" height="215" preserveAspectRatio="xMinYMin meet" viewBox="0 0 480 215" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="480" height="215"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-215)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="143" width="138" height="62" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="9" y="187" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,374) scale(1,-1)">Исходные страницы</text>
+			<text x="9" y="169" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,338) scale(1,-1)">HTML, таблицы, файлы</text>
+			<rect x="170" y="143" width="138" height="62" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="179" y="187" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,374) scale(1,-1)">Документы</text>
+			<text x="179" y="169" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,338) scale(1,-1)">Чистый текст и исходные</text>
+			<text x="179" y="158" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,316) scale(1,-1)">ID</text>
+			<rect x="342" y="143" width="138" height="62" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="351" y="187" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,374) scale(1,-1)">Чанки</text>
+			<text x="351" y="169" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,338) scale(1,-1)">384 токена, перекрытие 64</text>
+			<path d="M 138,173 L 168,173 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="168 173, 163 175.7, 163 170.3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<path d="M 308,173 L 340,173 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="340 173, 335 175.7, 335 170.3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<rect x="170" y="25" width="138" height="70" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="179" y="77" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,154) scale(1,-1)">BM25-индекс</text>
+			<text x="179" y="59" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,118) scale(1,-1)">Поиск совпадений слов</text>
+			<rect x="342" y="25" width="138" height="70" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="351" y="77" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,154) scale(1,-1)">E5 и FAISS</text>
+			<text x="351" y="59" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,118) scale(1,-1)">Числа и поиск сходства</text>
+			<path d="M 405,143 L 405,97 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="405 97, 402.3 102, 407.7 102" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<path d="M 365,143 L 365,118 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 365,118 L 239,118 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 239,118 L 239,97 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="239 97, 236.3 102, 241.7 102" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+		</g>
+	</g>
+</svg>

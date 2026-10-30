@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="480" height="133" preserveAspectRatio="xMinYMin meet" viewBox="0 0 480 133" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="480" height="133"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-133)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="43" width="142" height="70" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="9" y="95" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,190) scale(1,-1)">Полная новая запись</text>
+			<text x="9" y="77" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,154) scale(1,-1)">Временный файл</text>
+			<rect x="169" y="43" width="142" height="70" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="178" y="95" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,190) scale(1,-1)">Атомарная замена</text>
+			<text x="178" y="77" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,154) scale(1,-1)">os.replace + FileLock</text>
+			<rect x="338" y="43" width="142" height="70" style="stroke: rgb(86%,89%,86%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,94%,92%); fill-rule: evenodd;"/>
+			<text x="347" y="95" style="font-family: Noto-Bold; font-size: 10px;fill: rgb(12%,18%,13%); stroke:none;" transform="translate(0,190) scale(1,-1)">Готовый JSON</text>
+			<text x="347" y="77" style="font-family: Noto; font-size: 8.7px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,154) scale(1,-1)">Читатель видит целый файл</text>
+			<path d="M 142,78 L 167,78 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="167 78, 162 80.7, 162 75.3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<path d="M 311,78 L 336,78 Z" style="stroke: rgb(24%,33%,24%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="336 78, 331 80.7, 331 75.3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(24%,33%,24%); fill-rule: evenodd;"/>
+			<text x="0" y="12" style="font-family: Noto; font-size: 9.5px;fill: rgb(38%,44%,38%); stroke:none;" transform="translate(0,24) scale(1,-1)">При временной блокировке Windows выполняются ограниченные повторы записи.</text>
+		</g>
+	</g>
+</svg>

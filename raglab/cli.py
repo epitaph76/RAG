@@ -7,12 +7,12 @@ from .storage import write_json
 from .data import prepare
 from .models import Models
 from .retrieval import Index
-from .generation import Budget, generate
+from .generation import UsageLedger, generate
 from .evaluation import evaluate, evaluate_qa, no_evidence_checks
 
 def main():
     parser = argparse.ArgumentParser(description="Hybrid RAG + Laya")
-    parser.add_argument("command", choices=["prepare", "index", "evaluate", "qa", "ask", "budget", "models", "benchmark", "check-api", "export-results"])
+    parser.add_argument("command", choices=["prepare", "index", "evaluate", "qa", "ask", "usage", "budget", "models", "benchmark", "check-api", "export-results"])
     parser.add_argument("--dataset", choices=["rubq", "scifact"], help="Default: RuBQ for individual commands; both datasets for benchmark")
     parser.add_argument("--suite", choices=["baseline", "laya"], default="baseline")
     parser.add_argument("--count", type=int)
@@ -21,14 +21,12 @@ def main():
     parser.add_argument("--profile", choices=["sub2api", "routerai"], default="sub2api")
     parser.add_argument("--key-stdin", action="store_true", help="Read API key from hidden pipe input; never save it")
     parser.add_argument("--rebuild", action="store_true")
-    parser.add_argument("--add", type=int, help="Explicitly extend the API attempt limit")
+    parser.add_argument("--add", type=int, help="Deprecated compatibility option; requests are unlimited")
     args = parser.parse_args()
     if args.key_stdin:
         os.environ[profiles()[args.profile].key_env] = sys.stdin.readline().strip()
-    if args.command == "budget":
-        if args.add:
-            Budget().extend(args.add)
-        print(json.dumps(Budget().status(), indent=2))
+    if args.command in ("usage", "budget"):
+        print(json.dumps(UsageLedger().migrate(), indent=2))
         return
     if args.command == "check-api":
         rows = no_evidence_checks(profiles()[args.profile])

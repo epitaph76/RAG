@@ -3,13 +3,14 @@ address = "127.0.0.1"
 port = 8501
 headless = true
 fileWatcherType = "none"
+enableStaticServing = true
 
 [browser]
 gatherUsageStats = false
 
 [theme]
 base = "light"
-primaryColor = "#276147"
-backgroundColor = "#f6f7f4"
-secondaryBackgroundColor = "#e8eee8"
-textColor = "#172d24"
+primaryColor = "#3f553e"
+backgroundColor = "#f4f6f3"
+secondaryBackgroundColor = "#e8ede7"
+textColor = "#1f2f22"

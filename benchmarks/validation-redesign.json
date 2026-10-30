@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-30",
+  "scope": "Service redesign and removal of internal API attempt quota",
+  "tests": {"passed": 26, "failed": 0, "command": "python -m pytest tests/test_core.py tests/test_app.py -q"},
+  "http": {"app": 200, "font": 200, "font_content_type": "font/woff2"},
+  "api": {"profile": "sub2api", "model": "gpt-5.6-luna", "used_before": 20, "used_after": 22, "unlimited": true, "legacy_limit_present": false},
+  "browser": {
+    "settings_hidden_from_home": true,
+    "search_mode_persists": true,
+    "new_chat_clears_history": true,
+    "answer_with_citations": true,
+    "source_expands": true,
+    "insufficient_context_refusal": true,
+    "report_download": true,
+    "json_download": true,
+    "csv_download": true,
+    "settings_and_downloads_do_not_generate": true
+  },
+  "screenshots": ["docs/home.jpg", "docs/settings.jpg", "docs/app.jpg"],
+  "benchmark_provenance": "Historical retrieval and QA measurements remain tied to baseline commit 0f76e45; they were not rerun for the CSS and quota changes."
+}

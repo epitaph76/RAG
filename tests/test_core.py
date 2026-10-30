@@ -150,9 +150,11 @@ def test_budget_counts_failed_attempts_without_retries(tmp_path):
     state = budget.status()
     state["limit"] = 2
     write_json(budget.path, state)
-    with pytest.raises(GenerationError, match="исчерпан"):
+    with pytest.raises(GenerationError):
         generate("q", hits(), profiles()["sub2api"], budget=budget, client=client)
-    assert broken.calls == 1
+    assert broken.calls == 2
+    assert budget.status()["used"] == 3
+    assert "limit" not in budget.status()
 
 def test_generator_sources_and_usage(tmp_path):
     captured = {}
@@ -198,8 +200,20 @@ def test_budget_is_shared_and_atomic(tmp_path):
             return None
     with ThreadPoolExecutor(max_workers=5) as pool:
         attempts = list(pool.map(reserve, range(25)))
-    assert sorted(x for x in attempts if x is not None) == list(range(2, 21))
-    assert Budget(path).status()["used"] == 20
+    assert sorted(x for x in attempts if x is not None) == list(range(2, 27))
+    assert Budget(path).status()["used"] == 26
+    assert Budget(path).status()["unlimited"] is True
+
+def test_legacy_exhausted_budget_is_migrated_without_losing_history(tmp_path):
+    path = tmp_path / "budget.json"
+    write_json(path, {"used": 20, "limit": 20, "events": [{"attempt": 20, "purpose": "old"}]})
+    ledger = Budget(path)
+    ledger.migrate()
+    assert ledger.reserve("sub2api", "test", "new") == 21
+    state = read_json(path)
+    assert "limit" not in state and state["unlimited"] is True
+    assert state["events"][0]["purpose"] == "old"
+    assert len(state["events"]) == 2
 
 def test_completed_model_snapshot_is_available_without_network(monkeypatch, tmp_path):
     import raglab.models as module

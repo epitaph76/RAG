@@ -12,36 +12,39 @@ REFUSAL = "Недостаточно данных в источниках."
 class GenerationError(RuntimeError):
     pass
 
-class Budget:
-    """Cross-process attempt counter. Failed/timeout attempts are not refunded."""
+class UsageLedger:
+    """Unlimited cross-process attempt ledger; old quota fields are ignored."""
     def __init__(self, path=None):
         self.path = path or ARTIFACTS / "api-budget.json"
 
     def status(self):
-        return read_json(self.path) if self.path.exists() else {"limit": 20, "used": 1, "events": []}
+        state = read_json(self.path) if self.path.exists() else {"used": 1, "events": []}
+        state.pop("limit", None)
+        state["unlimited"] = True
+        return state
+
+    def migrate(self):
+        """Preserve the historical count while removing a saved legacy quota."""
+        from filelock import FileLock
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        with FileLock(str(self.path) + ".lock"):
+            state = self.status()
+            write_json(self.path, state)
+        return state
 
     def reserve(self, profile, model, purpose):
         from filelock import FileLock
         self.path.parent.mkdir(parents=True, exist_ok=True)
         with FileLock(str(self.path) + ".lock"):
             state = self.status()
-            if state["used"] >= state["limit"]:
-                raise GenerationError("Лимит API-попыток исчерпан. Новый лимит задаётся явно командой budget.")
             state["used"] += 1
             state["events"].append({"attempt": state["used"], "profile": profile, "model": model,
                                     "purpose": purpose, "utc": datetime.now(timezone.utc).isoformat()})
             write_json(self.path, state)
             return state["used"]
 
-    def extend(self, additional):
-        from filelock import FileLock
-        if additional <= 0:
-            raise ValueError("additional must be positive")
-        self.path.parent.mkdir(parents=True, exist_ok=True)
-        with FileLock(str(self.path) + ".lock"):
-            state = self.status()
-            state["limit"] += additional
-            write_json(self.path, state)
+# Keep the original Python entry point compatible with existing integrations.
+Budget = UsageLedger
 
 def validate_citations(text, count):
     citations = sorted({int(x) for x in re.findall(r"\[(\d+)\]", text)})
@@ -53,7 +56,7 @@ def validate_citations(text, count):
 def generate(question, hits, profile, api_key=None, budget=None, purpose="chat", client=None):
     key = api_key or os.getenv(profile.key_env, "")
     if not key and client is None:
-        raise GenerationError(f"Задайте {profile.key_env} или введите ключ в боковой панели.")
+        raise GenerationError(f"Откройте «Настройки → Подключение» и введите ключ или задайте {profile.key_env}.")
     from openai import OpenAI
     client = client or OpenAI(api_key=key, base_url=profile.base_url, max_retries=0, timeout=60)
     context = "\n\n".join(f"[{i}] {hit.chunk.title}\n{hit.chunk.text}" for i, hit in enumerate(hits, 1))
@@ -66,7 +69,7 @@ def generate(question, hits, profile, api_key=None, budget=None, purpose="chat",
     params = {"model": profile.model, "messages": messages, "max_completion_tokens": 512, "stream": False}
     if profile.name == "sub2api":
         params["reasoning_effort"] = "low"
-    (budget or Budget()).reserve(profile.name, profile.model, purpose)
+    (budget or UsageLedger()).reserve(profile.name, profile.model, purpose)
     started = time.perf_counter()
     try:
         response = client.chat.completions.create(**params)
